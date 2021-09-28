@@ -1,4 +1,11 @@
 ## C语言
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928181913.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928182452.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928182522.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928183728.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928182545.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928182617.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928182645.png)
 
 ```c
 #include <stdio.h>
@@ -81,4 +88,4 @@ int main(){
 	printf("That's OK!");
 	return 0;
 }
-
+```
