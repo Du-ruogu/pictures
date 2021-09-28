@@ -1,5 +1,7 @@
-  '''c
-  #include <stdio.h>
+## C语言
+
+```c
+#include <stdio.h>
 #include <ctype.h>
 
 int main(){
@@ -72,7 +74,7 @@ int main(){
 		count++;
 	}
 	if(d == 0){
-		printf("No, must contain uppercase letters");
+		printf("No, must contain numbers");
 		return 0;
 	}
 	
