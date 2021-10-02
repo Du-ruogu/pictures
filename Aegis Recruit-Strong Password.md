@@ -90,3 +90,66 @@ int main(){
 }
 ```
 ## JAVA
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928193449.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928193539.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928193559.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928193618.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928193653.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928193716.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20210928194111.png)
+```java
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Practise{
+	
+	public static void main(String [] args) {
+		Scanner in = new Scanner(System.in);
+		String str = in.nextLine();
+		char ch;
+		int a = 0, b = 0, c = 0, d = 0, e = 1, f = 0; 
+		for(int i=0;i < str.length();i++) {
+			ch = str.charAt(i);
+			if(Character.isDigit(ch)) {
+				a = 1;
+			}
+			else if (Character.isUpperCase(ch)) {
+				b = 1;
+			} else if (Character.isLowerCase(ch)) {
+				c = 1;
+			}
+			if (str.length() >= 9){
+				d = 1;
+			}
+			if (str.length() > 20){
+				e = 0;
+			}
+			if(Pattern.compile("[ _`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]|\n|\r|\t").matcher(str).find()){
+				f = 1;
+			}
+		}
+		if(a==1 && b==1 && c==1 && d==1 && e==1 && f==1)
+			System.out.println("ok");
+		if(a == 0){
+			System.out.println("No, must contain numbers");
+		}
+		if(b == 0){
+			System.out.println("No, must contain uppercase letters");
+		}
+		if(c == 0){
+			System.out.println("No, must contain lowercase letters");
+		}
+		if(d == 0){
+			System.out.println("No, too short");
+		}
+		if(e == 0){
+			System.out.println("No, too long");
+		}
+		if(f == 0){
+			System.out.println("No, must contain symbols");
+		}
+		
+	}
+
+}
+```
