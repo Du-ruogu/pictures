@@ -153,3 +153,48 @@ public class Practise{
 
 }
 ```
+## python
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002150147.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002151205.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002151228.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002151247.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002151301.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002151317.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002151552.png)
+```python
+import re
+def test(pw):
+    a = 0
+    b = 0
+    c = 0
+    if len(pw) > 19:
+        print("No, too long")
+        return
+    if len(pw) < 10:
+        print("No, too short")
+        return
+    test = re.search(r"\W", pw)
+    if test == None:
+        print("No, must contain symbols")
+        return
+    for i in pw:
+        if i.isdigit() == True:
+            a = 1
+        elif i.islower() == True:
+            b = 1
+        elif i.isupper() == True:
+            c = 1
+    if a == 0:
+        print("No, must contain numbers")
+        return
+    if b == 0:
+        print("No, must contain lowercase letters")
+        return
+    if c == 0:
+        print("No, must contain uppercase letters")
+        return
+    print("OK")
+    return
+pw = input()
+test(pw)
+```
