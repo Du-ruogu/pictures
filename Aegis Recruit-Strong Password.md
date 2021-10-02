@@ -198,3 +198,72 @@ def test(pw):
 pw = input()
 test(pw)
 ```
+## javascript
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233330.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233356.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233445.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233456.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233523.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233534.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233551.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233601.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233618.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233627.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233651.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233752.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233801.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233916.png)
+![Alt text](https://github.com/Du-ruogu/pictures/blob/main/QQ%E6%88%AA%E5%9B%BE20211002233924.png)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>强密码</title>
+    <script type="text/javascript">
+        function test(pw){
+            var a = 0, b = 0, c = 0, d = 0;
+            if(pw.length < 8){
+                console.log("No, too short")
+                return
+            }
+            if(pw.length > 19){
+                console.log("No, too long")
+                return
+            }
+            var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>《》/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？ ]")
+            if(!pattern.test(pw)){
+                console.log("No, must contain symbols")
+                return
+            }
+            for( var i = 0; i < pw.length; i++){
+                if( pw[i] <= 'Z' && pw[i] >= 'A'){
+                    a = 1;
+                }else if( pw[i] <= 'z' && pw[i] >= 'a'){
+                    b = 1;
+                }else if(!isNaN(pw[i])){
+                    c = 1;
+                }
+            }
+            if(a == 0){
+                console.log("No, must contain uppercase letters");
+                return
+            }else if(b == 0){
+                console.log("No, must contain lowercase letters");
+                return
+            }else if(c == 0){
+                console.log("No, must contain numbers")
+                return
+            }
+            console.log("ok");
+
+        }
+        var pw = prompt('请输入'); 
+        test(pw);
+    </script>
+</head>
+<body>
+ 
+</body>
+</html>
+```
